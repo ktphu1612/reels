@@ -1,0 +1,18 @@
+.editor { position: absolute; z-index: 3; inset: 0; pointer-events: none; }
+.canvas { position: absolute; inset: 0; pointer-events: none; }
+.target { position: absolute; box-sizing: border-box; border: 1px solid var(--amber); pointer-events: auto; touch-action: none; }
+.target:focus-visible { outline: 2px solid var(--amber-bright); outline-offset: 2px; }
+.target.active { border-color: var(--amber-bright); }
+.media { position: absolute; z-index: 0; inset: 0; display: block; width: 100%; height: 100%; max-width: none; max-height: none; }
+.dragSurface { position: absolute; z-index: 1; inset: 0; cursor: move; pointer-events: auto; touch-action: none; }
+.dragSurfaceWithControls { bottom: 3rem; }
+.handle { position: absolute; z-index: 2; width: .9rem; height: .9rem; padding: 0; border: 2px solid #21170b; border-radius: 50%; background: var(--amber-bright); cursor: nwse-resize; pointer-events: auto; touch-action: none; }
+.handle:hover, .handle:focus-visible { background: #fff0c9; }
+.handleTopLeft { top: 0; left: 0; transform: translate(-50%, -50%); cursor: nwse-resize; }
+.handleTopRight { top: 0; right: 0; transform: translate(50%, -50%); cursor: nesw-resize; }
+.handleBottomLeft { bottom: 0; left: 0; transform: translate(-50%, 50%); cursor: nesw-resize; }
+.handleBottomRight { right: 0; bottom: 0; transform: translate(50%, 50%); cursor: nwse-resize; }
+.pending { position: absolute; top: .55rem; left: .55rem; padding: .45rem .6rem; border: 1px solid rgba(239,175,85,.55); border-radius: .4rem; color: var(--amber-bright); background: rgba(7,10,8,.86); font-size: .68rem; font-weight: 700; pointer-events: none; }
+.error { position: absolute; top: .55rem; left: .55rem; max-width: calc(100% - 9rem); padding: .45rem .6rem; border: 1px solid rgba(230, 104, 91, .7); border-radius: .4rem; color: #ffd8d2; background: rgba(55, 14, 12, .9); font-size: .68rem; font-weight: 700; pointer-events: none; }
+.resetButton { position: absolute; top: .55rem; right: .55rem; min-height: 2.1rem; padding: .35rem .55rem; border: 1px solid rgba(239,175,85,.55); border-radius: .4rem; color: var(--amber-bright); background: rgba(7,10,8,.78); cursor: pointer; pointer-events: auto; font-size: .64rem; font-weight: 800; }
+.resetButton:hover { border-color: var(--amber-bright); background: rgba(239,175,85,.12); }

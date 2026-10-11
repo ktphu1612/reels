@@ -1,0 +1,41 @@
+.page { display: grid; gap: 1.4rem; }
+.pageHeader { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; }
+.kicker { margin: 0; color: var(--amber); font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .12em; }
+.pageHeader h1 { margin: .5rem 0 .35rem; font-size: clamp(1.8rem, 3vw, 2.55rem); letter-spacing: -.06em; }
+.pageHeader h1 span { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .85rem; vertical-align: top; }
+.subtitle { max-width: 38rem; margin: 0; color: var(--muted); font-size: .81rem; line-height: 1.55; }
+.realtime { display: grid; grid-template-columns: auto 1fr; column-gap: .5rem; align-items: center; min-width: 13rem; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: .65rem; color: var(--muted); background: rgba(255,255,255,.018); }
+.realtime > span { grid-row: span 2; width: .5rem; height: .5rem; border-radius: 50%; background: currentColor; }
+.realtime strong { font-size: .7rem; }
+.realtime small { margin-top: .15rem; color: inherit; font-size: .65rem; }
+.realtimeLive { color: var(--green); border-color: rgba(120,180,111,.25); background: rgba(120,180,111,.05); }
+.filterBar { display: flex; gap: .35rem; overflow-x: auto; padding: .35rem; border: 1px solid var(--line); border-radius: .7rem; background: rgba(255,255,255,.018); }
+.filterBar button { min-height: 2.55rem; padding: .4rem .7rem; border: 0; border-radius: .45rem; color: var(--muted); background: transparent; font-size: .71rem; white-space: nowrap; }
+.filterBar button span { margin-left: .4rem; color: inherit; font-family: 'DM Mono', monospace; font-size: .62rem; opacity: .65; }
+.filterBar button:hover, .filterActive { color: var(--text) !important; background: var(--surface-3) !important; }
+.filterActive { box-shadow: inset 0 -2px var(--amber); }
+.jobList { display: grid; gap: .7rem; }
+.jobRow { position: relative; display: grid; grid-template-columns: minmax(13rem, 1.15fr) minmax(15rem, 1fr) auto; gap: 1.2rem; align-items: center; padding: 1.05rem 1.1rem; border: 1px solid var(--line); border-radius: .75rem; background: linear-gradient(105deg, rgba(28,35,29,.9), rgba(18,22,19,.9)); }
+.jobTitle { display: flex; align-items: center; gap: .6rem; }
+.jobId { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .58rem; }
+.jobMain h2 { margin: .5rem 0 .25rem; font-size: .93rem; letter-spacing: -.02em; }
+.jobMain p { margin: 0; color: var(--muted); font-size: .68rem; }
+.progressHeader, .progressMeta { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .68rem; }
+.progressHeader strong { color: var(--amber-bright); font-family: 'DM Mono', monospace; font-size: .7rem; }
+.progressTrack { height: .42rem; margin: .55rem 0 .45rem; overflow: hidden; border-radius: 99px; background: rgba(255,255,255,.08); }
+.progressTrack span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--amber), var(--green)); transition: width .3s ease; }
+.progressMeta { font-family: 'DM Mono', monospace; font-size: .57rem; }
+.jobActions { display: flex; justify-content: flex-end; min-width: 9.5rem; }
+.primaryButton, .ghostButton, .dangerButton { min-height: 2.55rem; padding: .5rem .7rem; border: 1px solid transparent; border-radius: .5rem; font-size: .68rem; font-weight: 800; white-space: nowrap; }
+.primaryButton { color: #21170b; background: var(--amber); }
+.ghostButton { border-color: var(--line-strong); color: var(--text); background: rgba(255,255,255,.025); }
+.dangerButton { border-color: rgba(226,121,104,.4); color: #ffc0b3; background: rgba(226,121,104,.1); }
+.jobError { grid-column: 1 / -1; margin: -.2rem 0 0; color: #ffac9e; font-size: .7rem; }
+.notice { margin: 0; color: var(--green); font-size: .75rem; }
+.liveRegion { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.dialogBody { padding-top: 1rem; }
+.dialogBody p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+.dialogActions { display: flex; justify-content: flex-end; gap: .55rem; margin-top: 1rem; padding-top: .8rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 900px) { .pageHeader { align-items: flex-start; flex-direction: column; } .jobRow { grid-template-columns: 1fr 1fr; } .jobActions { grid-column: 1 / -1; justify-content: flex-start; } }
+@media (max-width: 600px) { .jobRow { grid-template-columns: 1fr; } .jobProgress, .jobActions { grid-column: auto; } .jobActions { justify-content: flex-start; } .realtime { min-width: 0; width: 100%; } }

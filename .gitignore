@@ -1,0 +1,22 @@
+node_modules/
+dist/
+apps/*/dist/
+packages/*/dist/
+coverage/
+.vite/
+.env.local
+data/
+outputs/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.superpowers/
+.git-disabled/
+.git-partial-recovery/
+playwright-report/
+test-results/
+*.log
+*.partial.mp4
+/FDown.vn_Tai_video_Facebook_720p (HD)_5964.mp4
+youtube-chrome/
+social-chrome-profile/

@@ -1,0 +1,7 @@
+.backdrop { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 1rem; background: rgba(3, 5, 4, .78); backdrop-filter: blur(7px); }
+.dialog { width: min(100%, 34rem); max-height: min(90vh, 42rem); overflow: auto; padding: 1.35rem; border: 1px solid var(--line-strong); border-radius: 1rem; background: linear-gradient(145deg, #202720, #141916); box-shadow: 0 1.5rem 5rem rgba(0,0,0,.46); }
+.header { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+.kicker { color: var(--amber); font-family: 'DM Mono', monospace; font-size: .61rem; letter-spacing: .12em; }
+.header h2 { margin: .4rem 0 0; font-size: 1.25rem; letter-spacing: -.03em; }
+.closeButton { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 1px solid var(--line); border-radius: .55rem; color: var(--muted); background: transparent; font-size: 1.3rem; }
+.closeButton:hover { color: var(--text); border-color: var(--line-strong); }

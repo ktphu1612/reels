@@ -1,0 +1,11 @@
+.editor { display: grid; gap: .6rem; margin-top: .65rem; padding: .7rem; border: 1px solid rgba(239,175,85,.2); border-radius: .55rem; background: rgba(239,175,85,.035); }
+.header { display: flex; justify-content: space-between; gap: .7rem; }
+.header strong { color: var(--amber-bright); font-size: .7rem; }
+.header p { margin: .2rem 0 0; color: var(--muted); font-size: .62rem; }
+.applied { color: var(--green); font-family: 'DM Mono', monospace; font-size: .58rem; }
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+.actions { display: flex; gap: .4rem; }
+.actions button { min-height: 2.2rem; padding: .4rem .55rem; border: 1px solid var(--line); border-radius: .4rem; color: var(--muted); background: transparent; font-size: .64rem; }
+.actions button:first-child { border-color: rgba(120,180,111,.25); color: var(--green); background: rgba(120,180,111,.06); }
+.actions button:disabled { cursor: not-allowed; opacity: .45; }
+@media (max-width: 720px) { .fields { grid-template-columns: 1fr; } }

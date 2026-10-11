@@ -1,0 +1,30 @@
+{
+  "name": "reelforge-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "npm run test --workspaces --if-present && npm run test:packaging",
+    "test:packaging": "node --test scripts/setup.test.mjs scripts/security-scan.test.mjs tests/task-7-runtime.test.mjs tests/task-7-security.test.mjs tests/task-7-shutdown.test.mjs",
+    "test:security": "node --test scripts/security-scan.test.mjs tests/task-7-security.test.mjs && node scripts/security-scan.mjs",
+    "lint": "npm run lint --workspaces --if-present",
+    "security": "node scripts/security-scan.mjs",
+    "start": "node scripts/start.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^4.0.16"
+  }
+}

@@ -1,0 +1,7 @@
+.badge { display: inline-flex; align-items: center; gap: .4rem; width: max-content; padding: .3rem .55rem; border: 1px solid var(--line); border-radius: 99px; color: var(--muted); font-size: .68rem; font-weight: 700; white-space: nowrap; }
+.dot { width: .4rem; height: .4rem; border-radius: 50%; background: currentColor; }
+.queued { color: var(--amber); border-color: rgba(239,175,85,.28); background: rgba(239,175,85,.08); }
+.running { color: #a8d698; border-color: rgba(120,180,111,.32); background: rgba(120,180,111,.1); }
+.succeeded { color: var(--green); border-color: rgba(120,180,111,.32); background: rgba(120,180,111,.1); }
+.failed { color: #ffac9e; border-color: rgba(226,121,104,.35); background: rgba(226,121,104,.08); }
+.cancelled { color: #b5bdb8; background: rgba(181,189,184,.08); }
